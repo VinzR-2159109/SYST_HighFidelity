@@ -1,0 +1,42 @@
+$bg-color: #f9f9f9;
+$panel-bg: #fff;
+$panel-border-radius: 8px;
+$panel-spacing: 16px;
+$text-color: #222;
+$subtitle-color: #666;
+
+.overview-container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    color: $text-color;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: $subtitle-color;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  mat-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: $panel-spacing;
+
+    mat-expansion-panel {
+      background-color: $panel-bg;
+      border-radius: $panel-border-radius;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+      ::ng-deep .mat-expansion-panel-header {
+        border-radius: $panel-border-radius;
+        font-weight: 500;
+      }
+    }
+  }
+}

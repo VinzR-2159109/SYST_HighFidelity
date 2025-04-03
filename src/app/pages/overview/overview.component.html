@@ -1,0 +1,14 @@
+<div class="overview-container">
+  <h1>Overzicht</h1>
+  <p>Financiële Hulpmiddelen</p>
+
+  <mat-accordion>
+    <mat-expansion-panel *ngFor="let item of faq">
+      <mat-expansion-panel-header>
+        <mat-panel-title>{{ item.title }}</mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>{{ item.content }}</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+</div>

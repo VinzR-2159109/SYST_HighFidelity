@@ -1,0 +1,58 @@
+$primary-text-color: #222;
+$secondary-text-color: #777;
+$background-color: #f9f9f9;
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: $background-color;
+  min-height: calc(50vh - 50px); // adjust for navbar height
+
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: $primary-text-color;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.25rem;
+    color: $secondary-text-color;
+    margin-bottom: 30px;
+  }
+
+  .button-row {
+    display: flex;
+    gap: 15px;
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid #ccc;
+      transition: all 0.2s ease-in-out;
+
+      &.btn-light {
+        background-color: white;
+        color: black;
+
+        &:hover {
+          background-color: #eee;
+        }
+      }
+
+      &.btn-dark {
+        background-color: #222;
+        color: white;
+
+        &:hover {
+          background-color: black;
+        }
+      }
+    }
+  }
+}

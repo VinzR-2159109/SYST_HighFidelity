@@ -1,0 +1,56 @@
+<div class="form-wrapper">
+  <h1>Simulatie Tool</h1>
+  <p>Studiekosten en financieringsopties</p>
+
+  <form [formGroup]="form" (ngSubmit)="submitForm()">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Surname</mat-label>
+      <input matInput formControlName="surname" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Studie richting</mat-label>
+      <mat-select formControlName="studyDirection">
+        <mat-option *ngFor="let option of studyDirections" [value]="option">
+          {{ option }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Aantal opgenomen studiepunten</mat-label>
+      <input matInput type="number" formControlName="studiepunten" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Nationaliteit</mat-label>
+      <mat-select formControlName="nationality">
+        <mat-option *ngFor="let nat of nationalities" [value]="nat">
+          {{ nat }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Studietoelagekrediet</mat-label>
+      <input matInput type="number" formControlName="studietoelagekrediet" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Referentie inkomen</mat-label>
+      <input matInput type="number" formControlName="referentieInkomen" />
+    </mat-form-field>
+
+    <button mat-raised-button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>

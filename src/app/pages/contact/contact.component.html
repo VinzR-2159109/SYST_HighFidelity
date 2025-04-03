@@ -1,0 +1,42 @@
+<div class="contact-wrapper">
+  <h1>Contacteer de sociale dienst</h1>
+  <p>Studiekosten en financieringsopties</p>
+
+  <section class="calendar-section">
+    <h2>Openingsuren</h2>
+    <mwl-calendar-month-view
+      [viewDate]="viewDate"
+      (dayClicked)="handleDayClick($event.day.date)">
+    </mwl-calendar-month-view>
+  </section>
+
+
+  <section class="location-section">
+    <h2>Locatie</h2>
+    <div class="map-grid">
+      <div>
+        <h3>Diepenbeek</h3>
+        <img src="diepenbeek-map.png" alt="Campus Diepenbeek" />
+      </div>
+      <div>
+        <h3>Hasselt</h3>
+        <img src="hasselt-map.png" alt="Campus Hasselt" />
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-info">
+    <h2>Contacteer ons via:</h2>
+    <div class="contact-row">
+      <img src="assets/contact-person.jpg" alt="Contactpersoon" />
+      <div class="text">
+        <p>📅 Openingsuren zonder afspraak: check bovenstaande agenda</p>
+        <p>📧 E-mail:
+          <a href="mailto:socialedienst@uhasselt.be">socialedienst&#64;uhasselt.be</a> of
+          <a href="mailto:liesbeth.huber@uhasselt.be">liesbeth.huber&#64;uhasselt.be</a>
+        </p>
+        <p>📱 GSM: +32(0)11 26 80 64</p>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,37 @@
+<h2>Maak een afspraak</h2>
+
+<p class="date">Geselecteerde datum: <strong>{{ data.date | date }}</strong></p>
+
+<input
+  [(ngModel)]="firstName"
+  placeholder="Voornaam"
+  class="text-input"
+/>
+
+<input
+  [(ngModel)]="lastName"
+  placeholder="Achternaam"
+  class="text-input"
+/>
+
+<input
+  [(ngModel)]="time"
+  placeholder="Tijdstip"
+  type="time"
+  class="text-input"
+/>
+
+<input
+  [(ngModel)]="extraNote"
+  placeholder="Extra opmerking (optioneel)"
+  class="text-input optional"
+/>
+
+<div class="actions">
+  <button (click)="cancel()">Annuleren</button>
+  <button
+    (click)="save()"
+    [disabled]="!firstName.trim() || !lastName.trim() || !time">
+    Opslaan
+  </button>
+</div>

@@ -10,6 +10,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 // Angular Calendar
 import { CalendarModule, CalendarView } from 'angular-calendar';
+import { MatDialog } from '@angular/material/dialog';
+import { AppointmentDialogComponent } from '../../components/appointment-dialog/appointment-dialog.component';
 
 @Component({
   selector: 'app-contact',
@@ -29,9 +31,23 @@ import { CalendarModule, CalendarView } from 'angular-calendar';
 
 export class ContactComponent {
   viewDate: Date = new Date();
+  appointments: { date: Date; description: string }[] = [];
+
+  constructor(private dialog: MatDialog) {}
 
   handleDayClick(date: Date): void {
-    console.log('Selected date:', date);
+    const dialogRef = this.dialog.open(AppointmentDialogComponent, {
+      data: { date }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result?.description?.trim()) {
+        this.appointments.push({
+          date,
+          description: result.description.trim()
+        });
+      }
+    });
   }
 }
 

@@ -53,4 +53,9 @@
 
     <button mat-raised-button type="submit" class="submit-btn">Submit</button>
   </form>
+
+  <div id="calculatedMoney" *ngIf="calculatedMoney !== null" style="margin-top: 20px;">
+    <h2>Geschatte toelage: € {{ calculatedMoney | number:'1.2-2' }}</h2>
+    <p>{{extraMessage}}</p>
+  </div>
 </div>

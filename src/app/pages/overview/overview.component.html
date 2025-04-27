@@ -2,8 +2,17 @@
   <h1>Overzicht</h1>
   <p>Financiële Hulpmiddelen</p>
 
+  <div>
+    <input
+      type="text"
+      placeholder="Zoek in Overzicht"
+      [(ngModel)]="searchQuery"
+      class="search-bar"
+    />
+  </div>
+
   <mat-accordion>
-    <mat-expansion-panel *ngFor="let item of faq">
+    <mat-expansion-panel *ngFor="let item of filteredFaq">
       <mat-expansion-panel-header>
         <mat-panel-title>{{ item.title }}</mat-panel-title>
       </mat-expansion-panel-header>

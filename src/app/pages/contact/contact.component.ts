@@ -9,7 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 
 // Angular Calendar
-import { CalendarModule, CalendarView } from 'angular-calendar';
+import { CalendarModule, CalendarEvent} from 'angular-calendar';
 import { MatDialog } from '@angular/material/dialog';
 import { AppointmentDialogComponent } from '../../components/appointment-dialog/appointment-dialog.component';
 
@@ -34,6 +34,21 @@ export class ContactComponent {
   appointments: { date: Date; description: string }[] = [];
 
   constructor(private dialog: MatDialog) {}
+    openDays: { date: Date; hours: string }[] = [
+      { date: new Date(2025, 3, 7),  hours: '09:00-12:00' },
+      { date: new Date(2025, 3, 14), hours: '13:00-16:00' },
+      { date: new Date(2025, 3, 21), hours: '09:00-12:00' },
+    ];
+  
+    events: CalendarEvent[] = this.openDays.map(d => ({
+      start: d.date,
+      title: `Open: ${d.hours}`,
+      allDay: true,
+      color: {
+        primary:   '#76c7c0',
+        secondary: '#e6f7f5'
+      }
+    }));
 
   handleDayClick(date: Date): void {
     const dialogRef = this.dialog.open(AppointmentDialogComponent, {
@@ -48,6 +63,6 @@ export class ContactComponent {
         });
       }
     });
-  }
+  }  
 }
 

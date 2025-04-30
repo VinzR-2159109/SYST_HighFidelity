@@ -1,5 +1,5 @@
 ## Introductie
-- Kort uitleggen:  
+- Kort uitleggen:
   "Vandaag gaan we testen hoe makkelijk het is om informatie te vinden, een simulatie uit te voeren en een afspraak te maken voor financiële hulp."
 - Vraag hen om **hardop te denken** ("Wat denk je nu?", "Waar verwacht je dat je kan klikken?").
 - Tel het aantal click die nodig zijn om tot het resultaat te komen
@@ -23,14 +23,22 @@
 - Start: Klik op **Simulatie** of **Simulatie Tool**.
 - Te gebruiken voorbeeld:
 
-> **Name**: Emma  
-> **Surname**: Janssens  
-> **Email**: emma.janssens@student.uhasselt.be  
-> **Studie richting**: Rechten  
-> **Aantal opgenomen studiepunten**: 60  
-> **Nationaliteit**: Belgisch  
-> **Studietoelagekrediet**: Ja  
-> **Referentie inkomen**: €18.500
+**Name**: Emma
+
+**Surname**: Janssens
+
+**Email**: emma.janssens@student.uhasselt.be
+
+**Studie richting**: Rechten
+
+**Aantal opgenomen studiepunten**: 60
+
+**Nationaliteit**: Belgisch
+
+**Studietoelagekrediet**: 120
+
+**Referentie inkomen**: €18.500
+
 
 - Aandachtspunten om te observeren:
   - Begrijpen ze elk veld zonder uitleg?
@@ -44,6 +52,7 @@
 - Start: Vanuit **Contact** pagina.
 - Verwachte actie: 
   - Een dag kiezen waarop de dienst **open** is.
+  - 12u smiddags
   - Formulier of afspraakmodule correct invullen.
 - Aandachtspunten:
   - Kunnen ze zien wanneer de dienst open is?

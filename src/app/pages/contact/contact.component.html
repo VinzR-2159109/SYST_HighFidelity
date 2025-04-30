@@ -4,11 +4,14 @@
 
   <section class="calendar-section">
     <h2>Openingsuren</h2>
-      <mwl-calendar-month-view
-      [viewDate]="viewDate"
-      [events]="events"
-      (dayClicked)="handleDayClick($event.day.date)">
-    </mwl-calendar-month-view>
+      <iframe
+        src="https://calendar.app.google/zRU2cBFTtBjCHK3c8"
+        style="border: 0"
+        width="100%"
+        height="800"
+        frameborder="0"
+        scrolling="no">
+    </iframe>
   </section>
 
 
@@ -35,12 +38,12 @@
     <div class="contact-row">
       <img src="contact-persoon.jpg" alt="Contactpersoon" />
       <div class="text">
-        <p>📅 Openingsuren zonder afspraak: check bovenstaande agenda</p>
         <p>📧 E-mail:
-          <a href="mailto:socialedienst@uhasselt.be">socialedienst&#64;uhasselt.be</a> of
-          <a href="mailto:liesbeth.huber@uhasselt.be">liesbeth.huber&#64;uhasselt.be</a>
+          <a href="mailto:socialedienst@uhasselt.be">socialedienst&#64;uhasselt.be</a>
         </p>
-        <p>📱 GSM: +32(0)11 26 80 64</p>
+        <p>📱 GSM:
+          <a href="callto: +32(0)11 26 80 64">+32(0)11 26 80 64</a>
+        </p>
       </div>
     </div>
   </section>
